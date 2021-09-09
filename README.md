@@ -15,6 +15,7 @@ Le GHaumCube64 est un jeu lumineux tridimentionnel sous forme de cube suspendu d
 ├── code
 │   ├── cube <= Code du cube
 │   └── remote <= Code de la télécommande/manette de jeu
+│   └── Tal_test <= Code de test des LEDs
 └── structure
     ├── placement
     │   └── cube.blend <= disposition des tåls dans l'espace
@@ -22,4 +23,14 @@ Le GHaumCube64 est un jeu lumineux tridimentionnel sous forme de cube suspendu d
         ├── tal.blend <= Modèle d'un tål complet
         ├── tal_bottom.stl.xz <= Export STL (compressé) de la partie basse
         └── tal_top.stl.xz <= Export STL (compressé) de la partie haute
+        └── Ball
+            ├── support_led_Tal.FCStd <= Support LEDs FreeCAD file
+            └── support_led_Tal.stl <= Export STL du support de LEDs
+
+
+
+
+
+
+
 ```
