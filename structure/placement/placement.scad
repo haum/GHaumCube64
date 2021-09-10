@@ -25,6 +25,8 @@ distance_cable = 600;
 distance_support = 286;
 sphere_size = 70;
 cable_diameter = 3;
+support_l = 30;
+support_h = 15;
 
 module cable(n, d) {
     // n: Number of tåls
@@ -40,18 +42,18 @@ module cable(n, d) {
 }
 
 module support_element() {
-    translate([0,-50/2,0])
-        cube([3*distance_support+100,50,30]);
+    translate([0,-(support_l/2),0])
+        cube([3*distance_support+100,support_l,support_h]);
 
     translate([3*distance_support,0,0])
         rotate([0,0,120])
-            translate([0,-50/2,0])
-                cube([3*distance_support,50,30]);
+            translate([0,-(support_l/2),0])
+                cube([3*distance_support,support_l,support_h]);
 
     translate([distance_support,0,0])
         rotate([0,0,60])
-            translate([0,-50/2,0])
-                cube([2*distance_support,50,30]);
+            translate([0,-(support_l/2),0])
+                cube([2*distance_support,support_l,support_h]);
 }
 
 color(show_color ? "red" : "grey")
