@@ -80,8 +80,6 @@ Wire Wire Line
 	3700 2950 3700 2850
 Wire Wire Line
 	3700 2850 4050 2850
-Wire Wire Line
-	4050 3600 4050 4050
 $Comp
 L Switch:SW_Push S1
 U 1 1 613916E0
@@ -418,7 +416,7 @@ Text Label 3050 3950 0    50   ~ 0
 L0
 Text Label 3050 3850 0    50   ~ 0
 L1
-Text Label 3050 4250 0    50   ~ 0
+Text Label 3050 4550 0    50   ~ 0
 L2
 $Comp
 L Device:LED L0
@@ -465,11 +463,7 @@ NoConn ~ 2250 4150
 NoConn ~ 2550 3350
 NoConn ~ 2650 4950
 Wire Wire Line
-	3050 4150 3700 4150
-Wire Wire Line
-	3700 3600 3700 4150
-Wire Wire Line
-	3050 4050 4050 4050
+	3700 3600 3700 4050
 $Comp
 L Device:R R3
 U 1 1 613A3F36
@@ -505,7 +499,7 @@ F 3 "~" H 9450 2950 50  0001 C CNN
 $EndComp
 Text Label 3050 4450 0    50   ~ 0
 C2
-Text Label 3050 4550 0    50   ~ 0
+Text Label 3050 4250 0    50   ~ 0
 C1
 $Comp
 L Mechanical:MountingHole H1
@@ -531,4 +525,10 @@ F 3 "~" H 7000 5650 50  0001 C CNN
 $EndComp
 Text Notes 3000 5350 0    50   ~ 0
 Power via wemos board
+Wire Wire Line
+	3050 4050 3700 4050
+Wire Wire Line
+	4050 3600 4050 4150
+Wire Wire Line
+	3050 4150 4050 4150
 $EndSCHEMATC
