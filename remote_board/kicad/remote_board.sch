@@ -405,9 +405,9 @@ C1
 Text Label 9450 2800 0    50   ~ 0
 C2
 Text Notes 6850 4750 0    50   ~ 0
-✓
-Text Notes 9300 4750 0    50   ~ 0
 ✗
+Text Notes 9300 4750 0    50   ~ 0
+✓
 Text Notes 8100 4750 0    50   ~ 0
 •
 Text Label 3050 4350 0    50   ~ 0
