@@ -69,6 +69,7 @@ class TalController:
             Color specification (3 bytes)
         """
         self._taler = {_: color for _ in range(self.Ntal)}
+        self.blit()
 
     def only(self, talid, color):
         """Light only one of the tåler with a given color
