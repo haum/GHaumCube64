@@ -35,7 +35,7 @@ class TalController:
         """
 
         # provide IP-Address to bind to if you are using Windows and want to use multicast
-        self.sender = sacn.sACNsender()
+        self.sender = sacn.sACNsender(source_name = "WS2812_SACN by HAUM.ORG")
         self.sender.start()  # start the sending thread
         self.sender.activate_output(1)  # start sending out data in the 1st universe
         self.sender[1].multicast = True  # set multicast to True
