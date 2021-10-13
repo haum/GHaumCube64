@@ -8,7 +8,7 @@ import time
 class TalController:
     """Controller for The Tål over sACN/E1.31
 
-    The __setitem__, __getitem__ and __deltime__ methods are implemented
+    The __setitem__, __getitem__ and __delitem__ methods are implemented
     and allow to address a given tål by simply slicing this controller and assigning a
     color. The ``del controller[k]`` is a short-hand for ``controller[k] = [0, 0, 0]``.
     Remember to call ``controller.blit()`` if your using slicing interface.
