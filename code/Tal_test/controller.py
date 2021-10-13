@@ -33,8 +33,8 @@ class WS2812_led:
                 self.sender[un+1].multicast = True
         self.Nbled = Nbled
 
-    def nb_univers(self):
-        return self.nb_univers
+    def used_univers(self):
+        return self.nb_univers+1
 
 class TalController:
     """Controller for The Tål over sACN/E1.31
