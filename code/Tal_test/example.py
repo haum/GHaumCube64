@@ -4,7 +4,7 @@
 from controller import TalController
 
 
-C = TalController(Ntal=64, Nled=3)
+C = TalController(Ntal=24, Nled=3)
 
 # all to white
 C.fill([0xff, 0xff, 0xff])

@@ -4,6 +4,37 @@
 import sacn
 import time
 
+class WS2812_led:
+
+    def __init__(self, Nbled = 128, destip = None ):
+
+        """
+        Parameters
+        ----------
+
+        Nbled: int
+            Number of connected ws2812_led
+
+        destip:
+            destination IP in unicast sender
+
+        """
+        nb_univers = int (Nbled/170)
+        self.nb_univers = nb_univers
+
+        # provide IP-Address to bind to if you are using Windows and want to use multicast
+        self.sender = sacn.sACNsender(source_name = "WS2812_SACN by HAUM.ORG")
+        self.sender.start()  # start the sending thread
+        for un in range(nb_univers):
+            self.sender.activate_output(un+1)  # start sending out data in the universe
+            if destip != None :
+                self.sender[un+1].destination = destip
+            else:
+                self.sender[un+1].multicast = True
+        self.Nbled = Nbled
+
+    def nb_univers(self):
+        return self.nb_univers
 
 class TalController:
     """Controller for The Tål over sACN/E1.31
