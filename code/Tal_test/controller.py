@@ -1,12 +1,15 @@
 #! /usr/bin/env python
 # -*- coding:utf8 -*-
 
-import sacn
 import time
+import math
+
+import sacn
+
 
 class WS2812_led:
 
-    def __init__(self, Nbled = 128, destip = None ):
+    def __init__(self, Nbled=128, destip=None):
 
         """
         Parameters
@@ -19,22 +22,62 @@ class WS2812_led:
             destination IP in unicast sender
 
         """
-        nb_univers = int (Nbled/170)
-        self.nb_univers = nb_univers
+
+        self.Nbled_by_universe = 170
+        self.nb_universes = math.ceil(Nbled/self.Nbled_by_universe)
 
         # provide IP-Address to bind to if you are using Windows and want to use multicast
         self.sender = sacn.sACNsender(source_name = "WS2812_SACN by HAUM.ORG")
         self.sender.start()  # start the sending thread
-        for un in range(nb_univers):
+        for un in range(self.nb_universes):
             self.sender.activate_output(un+1)  # start sending out data in the universe
             if destip != None :
                 self.sender[un+1].destination = destip
             else:
                 self.sender[un+1].multicast = True
         self.Nbled = Nbled
+        self._leds = None
+        self.fill()
 
-    def used_univers(self):
-        return self.nb_univers+1
+    def fill(self, color=[0, 0, 0], blit=False):
+        self._leds = {iu:
+            {il: color for il in range(self.Nbled_by_universe)}
+        for iu in range(1, 1+self.nb_universes)}
+        if blit:
+            self.blit()
+
+    def __blit_universe(self, universe):
+        self.sender[universe].dmx_data = sum([self._leds[universe][i] for i in range(self.Nbled_by_universe)], [])
+
+    def blit(self, universe=-1):
+        if universe == -1:
+            list_universes = range(1, 1+self.nb_universes)
+        else:
+            if type(universe) in [list, tuple]:
+                list_universes = universe
+            elif type(universe) == int:
+                list_universes = [universe]
+        for u in list_universes:
+            self.__blit_universe(u)
+
+    def dmx(self, idx, color, blit=False):
+        id_universe = 1 + math.floor(idx/self.Nbled_by_universe)
+        id_led = idx - (id_universe - 1)*self.Nbled_by_universe
+        self._leds[id_universe][id_led] = color
+        if blit:
+            self.blit(id_universe)
+
+    def stop(self, reset=True):
+        """Stop the sender"""
+        if reset:
+            self.fill(blit=True)
+        self.sender.stop()
+
+    def __getitem__(self, ledid):
+        return self._leds[ledid]
+
+    def __setitem__(self, ledid, color):
+        self._leds[ledid] = color
 
 class TalController:
     """Controller for The Tål over sACN/E1.31
@@ -65,30 +108,21 @@ class TalController:
             Number of LEDs per tål
         """
 
-        # provide IP-Address to bind to if you are using Windows and want to use multicast
-        self.sender = sacn.sACNsender(source_name = "WS2812_SACN by HAUM.ORG")
-        self.sender.start()  # start the sending thread
-        self.sender.activate_output(1)  # start sending out data in the 1st universe
-        self.sender[1].multicast = True  # set multicast to True
-        # self.sender[1].destination = destip  # or provide unicast information.
-        # Keep in mind that if multicast is on, unicast is not used
-
         self.Ntal = Ntal
         self.Nled = Nled
 
-        self._taler = None
-        self.fill()
-        self.blit()
+        self.leds = WS2812_led(Nbled=Ntal*Nled)
+
+        print(Ntal*Nled)
+        self.leds.fill(blit=True)
 
     def stop(self, reset=True):
         """Stop the sender"""
-        if reset:
-            self.fill()
-        self.sender.stop()
+        self.leds.stop(reset)
 
     def blit(self):
         """Blit the stored state of LED to The Tål"""
-        self.sender[1].dmx_data = sum([self._taler[_]*self.Nled for _ in range(self.Ntal)], [])
+        self.leds.blit()
 
     def fill(self, color=[0,0,0]):
         """Fill the whole Tål with a given color (default: black)
@@ -99,8 +133,7 @@ class TalController:
         color: 3-list of bytes
             Color specification (3 bytes)
         """
-        self._taler = {_: color for _ in range(self.Ntal)}
-        self.blit()
+        self.leds.fill(color, blit=True)
 
     def only(self, talid, color):
         """Light only one of the tåler with a given color
@@ -116,9 +149,9 @@ class TalController:
         if talid >= self.Ntal:
             raise ValueError('Invalid Tål id {}'.format(talid))
 
-        self.fill()
-        self._taler[talid] = color
-        self.blit()
+        self.leds.fill()
+        self[talid] = color
+        self.leds.blit()
 
     def chaser(self, color=[255, 255, 255], delay=0.5):
         """Play a chaser on all the tåler with a given delay
@@ -131,16 +164,16 @@ class TalController:
         delay: float
             Delay between 2 light ups
         """
-        self.fill()
         for idx in range(self.Ntal):
             self.only(idx, color)
             time.sleep(delay)
 
-    def __getitem__(self, k):
-        return self._taler[k]
+    def __getitem__(self, talid):
+        return self.leds[talid*self.Nled]
 
-    def __setitem__(self, k, v):
-        self._taler[k] = v
+    def __setitem__(self, talid, color):
+        for i in range(talid, talid+self.Nled):
+            self.leds.dmx(i, color)
 
     def __delitem__(self, k):
-        self._taler[k] = [0, 0, 0]
+        self[k] = [0, 0, 0]
