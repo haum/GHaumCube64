@@ -173,7 +173,7 @@ class TalController:
         return self.leds[talid*self.Nled]
 
     def __setitem__(self, talid, color):
-        for i in range(talid, talid+self.Nled):
+        for i in range(talid*self.Nled, (talid+1)*self.Nled):
             self.leds.dmx(i, color)
 
     def __delitem__(self, k):
