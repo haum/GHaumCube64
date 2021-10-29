@@ -178,4 +178,4 @@ class TalController:
 
     def __delitem__(self, k):
         self[k] = [0, 0, 0]
-Stop all le
+
