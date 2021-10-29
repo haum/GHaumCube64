@@ -167,6 +167,7 @@ class TalController:
         for idx in range(self.Ntal):
             self.only(idx, color)
             time.sleep(delay)
+        self.fill()
 
     def __getitem__(self, talid):
         return self.leds[talid*self.Nled]
