@@ -70,7 +70,9 @@ class WS2812_led:
     def stop(self, reset=True):
         """Stop the sender"""
         if reset:
+            self.sender.manual_flush = True # turning off the automatic sending of packets
             self.fill(blit=True)
+            self.sender.flush()
         self.sender.stop()
 
     def __getitem__(self, ledid):
