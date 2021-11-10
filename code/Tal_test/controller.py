@@ -9,7 +9,7 @@ import sacn
 
 class WS2812_led:
 
-    def __init__(self, Nbled=128, destip=None):
+    def __init__(self, Nbled=128, Fst_univ=1, Start_Chan = 1, source_name = "WS2812_SACN by HAUM.ORG", destip=None):
 
         """
         Parameters
@@ -21,20 +21,30 @@ class WS2812_led:
         destip:
             destination IP in unicast sender
 
+        Fst_uni:
+            First universe
+
+        Start_Chan:
+            Adress of first led
+
+        source_name:
+            Source name as a string
+
         """
 
         self.Nbled_by_universe = 170
         self.nb_universes = math.ceil(Nbled/self.Nbled_by_universe)
+        self.Fst_univ = Fst_univ
 
         # provide IP-Address to bind to if you are using Windows and want to use multicast
-        self.sender = sacn.sACNsender(source_name = "WS2812_SACN by HAUM.ORG")
+        self.sender = sacn.sACNsender(source_name = source_name)
         self.sender.start()  # start the sending thread
         for un in range(self.nb_universes):
-            self.sender.activate_output(un+1)  # start sending out data in the universe
+            self.sender.activate_output(un+self.Fst_univ)  # start sending out data in the universe
             if destip != None :
-                self.sender[un+1].destination = destip
+                self.sender[un+self.Fst_univ].destination = destip
             else:
-                self.sender[un+1].multicast = True
+                self.sender[un+self.Fst_univ].multicast = True
         self.Nbled = Nbled
         self._leds = None
         self.fill()
@@ -47,11 +57,11 @@ class WS2812_led:
             self.blit()
 
     def __blit_universe(self, universe):
-        self.sender[universe].dmx_data = sum([self._leds[universe][i] for i in range(self.Nbled_by_universe)], [])
+        self.sender[universe].dmx_data = sum([self._leds[ 1 + universe - self.Fst_univ][i] for i in range(self.Nbled_by_universe)], [])
 
     def blit(self, universe=-1):
         if universe == -1:
-            list_universes = range(1, 1+self.nb_universes)
+            list_universes = range(self.Fst_univ, self.Fst_univ+self.nb_universes)
         else:
             if type(universe) in [list, tuple]:
                 list_universes = universe
@@ -96,9 +106,18 @@ class TalController:
         Number of Tåler
     Nled: int
         Number of LED per Tål
+    destip:
+        destination IP in unicast sender
+    Fst_uni:
+        First universe
+    Start_Chan:
+        Adress of first led in first Tål
+    source_name:
+        Source name as a string
     """
 
-    def __init__(self, Ntal=64, Nled=3):
+    def __init__(self, Ntal=64, Nled=3, Fst_univ=1, Start_Chan = 1, source_name = "WS2812_SACN by HAUM.ORG", destip=None):
+
         """
         Parameters
         ----------
@@ -113,9 +132,9 @@ class TalController:
         self.Ntal = Ntal
         self.Nled = Nled
 
-        self.leds = WS2812_led(Nbled=Ntal*Nled)
+        self.leds = WS2812_led(Nbled=Ntal*Nled, Fst_univ=Fst_univ, source_name = source_name )
 
-        print(Ntal*Nled)
+        print("Nbleds: ",Ntal*Nled)
         self.leds.fill(blit=True)
 
     def stop(self, reset=True):
