@@ -1,30 +1,25 @@
 #! /usr/bin/env python
 # -*- coding:utf8 -*-
 
+import time
 from controller import TalController
+from plasma_gradient import plasma_gradient
 
+C = TalController(Ntal=64, Nled=3)
 
-C = TalController(Ntal=24, Nled=3)
+try:
+    for i in range(64):
+        C[i] = plasma_gradient(i/64.0)
+    C.blit()
 
-# all to white
-C.fill([0xff, 0xff, 0xff])
+    while True:
+        for i in range(64):
+            C[i] = [128, 255, 128]
+            C.blit()
+            time.sleep(0.4)
+            C[i] = plasma_gradient(i/64.0)
 
-# or
-C.fill([255, 255, 255])
+except KeyboardInterrupt:
+    pass
 
-# light up the tenth tål in red
-C.only(9, [255, 0, 0])
-
-# Start a blue chaser with a 0.2s delay
-C.chaser([0, 0, 255], 0.2)
-
-# Now empty The Tål and light up number 1 in red, 2, in green and 3 in blue
-C.fill()
-C[0] = [255, 0, 0]
-C[1] = [0, 255, 0]
-C[2] = [0, 0, 255]
-C.blit()
-
-# and stop the thingy
 C.stop()
-
