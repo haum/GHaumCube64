@@ -3,6 +3,7 @@
 import json
 import os
 import platform
+import signal
 import threading
 import time
 
@@ -106,7 +107,15 @@ def callback(packet):
 def callback(packet):
     sacn_received(2, packet)
 
+def signal_USR1_handler(signum, frame):
+    with lock:
+        names = set(l['sourceName'] for l in stats['history'])
+        for n in names:
+            d = sum(l['lastTime'] - l['firstTime'] for l in stats['history'] if l['sourceName'] == n)
+            print(f'\033[96m{d:10.1f} \033[93m{n}\033[0m')
+
 try:
+    signal.signal(signal.SIGUSR1, signal_USR1_handler)
     receiver.join_multicast(1)
     receiver.join_multicast(2)
     pyglet.clock.schedule_interval(update, 1/30.0)
