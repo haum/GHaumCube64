@@ -5,7 +5,7 @@ import time
 from controller import TalController
 from plasma_gradient import plasma_gradient
 
-C = TalController(Ntal=64, Nled=3)
+C = TalController(Ntal=64, Nled=3, source_name='HAUM tal position example')
 
 try:
     for i in range(64):
