@@ -124,7 +124,7 @@ void loop() {
   if (client) {
     tcpbtns_client.stop();
     tcpbtns_client = client;
-    tcpbtns_client.println("24HC21 remote");
+    tcpbtns_client.print("24HC21 remote\r\n");
     leds = 0;
   }
 
@@ -161,7 +161,7 @@ void loop() {
     digitalWrite(D8, HIGH);
 
     if (old != buttons)
-      tcpbtns_client.println(buttons);
+      tcpbtns_client.print(String(buttons, DEC)+"\r\n");
   }
 
   // Connection indicator
