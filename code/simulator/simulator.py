@@ -2,6 +2,7 @@
 
 import itertools
 import pyglet
+import sacn
 
 window = pyglet.window.Window(width=800, height=800)
 batch = pyglet.graphics.Batch()
@@ -53,7 +54,25 @@ def on_update(dt):
 
 pyglet.clock.schedule_interval(on_update, 1/30)
 
+receiver = sacn.sACNreceiver()
+receiver.start()
+receiver.join_multicast(1)
+receiver.join_multicast(2)
+
+@receiver.listen_on('universe', universe=1)
+def sacn_received_univ1(packet):
+    for i,c in enumerate(cases[:56]):
+        c.color = packet.dmxData[9*i:9*i+3]
+        pyglet.clock.schedule_once(lambda x: x, 0)
+
+@receiver.listen_on('universe', universe=2)
+def sacn_received_univ2(packet):
+    for i,c in enumerate(cases[56:]):
+        c.color = packet.dmxData[9*i:9*i+3]
+
 try:
     pyglet.app.run()
 except KeyboardInterrupt:
     pass
+
+receiver.stop()
