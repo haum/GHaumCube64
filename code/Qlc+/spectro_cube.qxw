@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.14.3</Version>
+  <Author>jerome</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <BeatGenerator BeatType="Disabled" BPM="0"/>
+   <Universe Name="Universe 1" ID="0">
+    <Input Plugin="MIDI" UID="None" Line="1" Profile="Akai APC Mini"/>
+    <Feedback Plugin="MIDI" UID="None" Line="1"/>
+   </Universe>
+   <Universe Name="Universe 2" ID="1"/>
+   <Universe Name="animateur" ID="2">
+    <Output Plugin="E1.31" UID="127.0.0.1" Line="0">
+     <PluginParameters UniverseChannels="8" mcastFullIP="239.255.0.3" multicast="1" priority="100" transmitMode="Full" universe="3"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 4" ID="3"/>
+   <Universe Name="tr_iface" ID="4" Passthrough="True">
+    <Input Plugin="E1.31" UID="127.0.0.1" Line="0">
+     <PluginParameters mcastFullIP="239.255.0.3" multicast="1" universe="3"/>
+    </Input>
+    <Output Plugin="E1.31" UID="192.168.0.140" Line="1">
+     <PluginParameters mcastFullIP="239.255.0.3" multicast="1" priority="100" transmitMode="Full" universe="3"/>
+    </Output>
+   </Universe>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Haum</Manufacturer>
+   <Model>GhaumCube64_2</Model>
+   <Mode>normal</Mode>
+   <ID>0</ID>
+   <Name>GhaumCube64_2</Name>
+   <Universe>2</Universe>
+   <Address>0</Address>
+   <Channels>8</Channels>
+  </Fixture>
+  <Function ID="0" Type="Scene" Name="00_BlackOut">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,0</FixtureVal>
+  </Function>
+  <Function ID="1" Type="Scene" Name="01_Fill">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,1</FixtureVal>
+  </Function>
+  <Function ID="2" Type="Scene" Name="02_Wipe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,2</FixtureVal>
+  </Function>
+  <Function ID="3" Type="Audio" Name="Wintergatan - Sandviken Stradivarius.flac">
+   <Speed FadeIn="0" FadeOut="0" Duration="350226"/>
+   <RunOrder>SingleShot</RunOrder>
+   <Source Device="pulse">/home/jerome/Musique/Wintergatan - Sandviken Stradivarius.flac</Source>
+  </Function>
+  <Function ID="4" Type="Scene" Name="06_ChaserFaceY">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,6</FixtureVal>
+  </Function>
+  <Function ID="5" Type="Scene" Name="05_ChaserFaceX">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,5</FixtureVal>
+  </Function>
+  <Function ID="6" Type="Scene" Name="13_WipeFaceX">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,13</FixtureVal>
+  </Function>
+  <Function ID="7" Type="Scene" Name="04_Flicker">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,4</FixtureVal>
+  </Function>
+  <Function ID="8" Type="Scene" Name="12_chaseEdges">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,12</FixtureVal>
+  </Function>
+  <Function ID="9" Type="Scene" Name="10_ChaserInOut">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,10</FixtureVal>
+  </Function>
+  <Function ID="10" Type="Scene" Name="17_WipeFacevertical">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,17</FixtureVal>
+  </Function>
+  <Function ID="11" Type="Scene" Name="03_Chaser">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,3</FixtureVal>
+  </Function>
+  <Function ID="12" Type="Scene" Name="09_ChaserVertical">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,9</FixtureVal>
+  </Function>
+  <Function ID="13" Type="Scene" Name="08_ChaserfaceXYZ">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,8</FixtureVal>
+  </Function>
+  <Function ID="14" Type="Scene" Name="07_ChaserFaceZ">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,7</FixtureVal>
+  </Function>
+  <Function ID="15" Type="Scene" Name="16_WipeFaceXYZ">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,16</FixtureVal>
+  </Function>
+  <Function ID="16" Type="Scene" Name="15_WipefaceZ">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,15</FixtureVal>
+  </Function>
+  <Function ID="17" Type="Scene" Name="14_WipeFaceY">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,14</FixtureVal>
+  </Function>
+  <Function ID="18" Type="Scene" Name="18_WipeInOut">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,18</FixtureVal>
+  </Function>
+  <Function ID="19" Type="Scene" Name="11_ChaserOutIn">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,11</FixtureVal>
+  </Function>
+  <Function ID="20" Type="Scene" Name="19_WipeOutIn">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,19</FixtureVal>
+  </Function>
+  <Function ID="21" Type="Scene" Name="20_WipeEdges">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">6,20</FixtureVal>
+  </Function>
+  <Function ID="22" Type="Scene" Name="GhaumCube64_2 - Noir - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,3,0,4,0,5,0</FixtureVal>
+  </Function>
+  <Function ID="23" Type="Scene" Name="GhaumCube64_2 - Bleu foncé - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,3,0,4,0,5,128</FixtureVal>
+  </Function>
+  <Function ID="24" Type="Scene" Name="GhaumCube64_2 - Bleu - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,3,0,4,0,5,255</FixtureVal>
+  </Function>
+  <Function ID="25" Type="Scene" Name="GhaumCube64_2 - Vert foncé - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,3,0,4,128,5,0</FixtureVal>
+  </Function>
+  <Function ID="26" Type="Scene" Name="GhaumCube64_2 - Cyan foncé - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,3,0,4,128,5,128</FixtureVal>
+  </Function>
+  <Function ID="27" Type="Scene" Name="GhaumCube64_2 - Vert - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,3,0,4,255,5,0</FixtureVal>
+  </Function>
+  <Function ID="28" Type="Scene" Name="GhaumCube64_2 - Cyan - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,3,0,4,255,5,255</FixtureVal>
+  </Function>
+  <Function ID="29" Type="Scene" Name="GhaumCube64_2 - Rouge foncé - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,128,3,128,4,0,5,0</FixtureVal>
+  </Function>
+  <Function ID="30" Type="Scene" Name="GhaumCube64_2 - Magenta foncé - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,128,3,128,4,0,5,128</FixtureVal>
+  </Function>
+  <Function ID="31" Type="Scene" Name="GhaumCube64_2 - Jaune foncé - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,128,3,128,4,128,5,0</FixtureVal>
+  </Function>
+  <Function ID="32" Type="Scene" Name="GhaumCube64_2 - Gris foncé - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,128,3,128,4,128,5,128</FixtureVal>
+  </Function>
+  <Function ID="33" Type="Scene" Name="GhaumCube64_2 - Gris clair - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,192,3,192,4,192,5,192</FixtureVal>
+  </Function>
+  <Function ID="34" Type="Scene" Name="GhaumCube64_2 - Rouge - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,3,255,4,0,5,0</FixtureVal>
+  </Function>
+  <Function ID="35" Type="Scene" Name="GhaumCube64_2 - Magenta - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,3,255,4,0,5,255</FixtureVal>
+  </Function>
+  <Function ID="36" Type="Scene" Name="GhaumCube64_2 - Jaune - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,3,255,4,255,5,0</FixtureVal>
+  </Function>
+  <Function ID="37" Type="Scene" Name="GhaumCube64_2 - Blanc - Scène">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255,3,255,4,255,5,255</FixtureVal>
+  </Function>
+  <Function ID="38" Type="Chaser" Name="16 couleurs chaser - GhaumCube64_2">
+   <Speed FadeIn="500" FadeOut="500" Duration="4294967294"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="500" Hold="4294967294" FadeOut="500">22</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">23</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">24</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">25</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">26</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">27</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">28</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">29</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">30</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">31</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">32</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">33</Step>
+   <Step Number="12" FadeIn="0" Hold="0" FadeOut="0">34</Step>
+   <Step Number="13" FadeIn="0" Hold="0" FadeOut="0">35</Step>
+   <Step Number="14" FadeIn="0" Hold="0" FadeOut="0">36</Step>
+   <Step Number="15" FadeIn="0" Hold="0" FadeOut="0">37</Step>
+  </Function>
+  <Function ID="39" Type="Chaser" Name="Animation Chaser">
+   <Speed FadeIn="10" FadeOut="10" Duration="4294967294"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">1</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">2</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">11</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">7</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">5</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">4</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">14</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">13</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">12</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">9</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">19</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">8</Step>
+   <Step Number="12" FadeIn="0" Hold="0" FadeOut="0">6</Step>
+   <Step Number="13" FadeIn="0" Hold="0" FadeOut="0">17</Step>
+   <Step Number="14" FadeIn="0" Hold="0" FadeOut="0">16</Step>
+   <Step Number="15" FadeIn="0" Hold="0" FadeOut="0">15</Step>
+   <Step Number="16" FadeIn="0" Hold="0" FadeOut="0">10</Step>
+   <Step Number="17" FadeIn="0" Hold="0" FadeOut="0">18</Step>
+   <Step Number="18" FadeIn="0" Hold="0" FadeOut="0">20</Step>
+   <Step Number="19" FadeIn="0" Hold="0" FadeOut="0">21</Step>
+  </Function>
+  <Function ID="40" Type="Show" Name="Nouveau show 40">
+   <TimeDivision Type="Time" BPM="120"/>
+   <Track ID="0" Name="Piste 1" isMute="0">
+    <ShowFunction ID="3" StartTime="0" Duration="350226" Color="#608053"/>
+   </Track>
+  </Function>
+  <Function ID="41" Type="Audio" Name="01 Hells Bells.mp3">
+   <Speed FadeIn="0" FadeOut="0" Duration="312507"/>
+   <RunOrder>SingleShot</RunOrder>
+   <Source>/home/jerome/Musique/AC-DC - Back in Black (1980)/01 Hells Bells.mp3</Source>
+  </Function>
+  <Monitor DisplayMode="0" ShowLabels="0">
+   <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="5" Height="3" Depth="5" Units="0"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="">
+   <Appearance>
+    <FrameStyle>None</FrameStyle>
+    <ForegroundColor>Default</ForegroundColor>
+    <BackgroundColor>Default</BackgroundColor>
+    <BackgroundImage>None</BackgroundImage>
+    <Font>Default</Font>
+   </Appearance>
+   <AudioTriggers BarsNumber="20" Caption="Equ" ID="27">
+    <WindowState Visible="True" X="50" Y="5" Width="845" Height="265"/>
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <Input Universe="0" Channel="210" UpperValue="8"/>
+    <VolumeBar Name="Barre de volume" Type="3" MinThreshold="76" MaxThreshold="127" Divisor="1" Index="1000" WidgetID="1"/>
+    <SpectrumBar Name="#3 (500Hz - 750Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="2">
+     <DMXChannels>0,7</DMXChannels>
+    </SpectrumBar>
+    <SpectrumBar Name="#4 (750Hz - 1000Hz)" Type="3" MinThreshold="76" MaxThreshold="127" Divisor="1" Index="3" WidgetID="10"/>
+    <SpectrumBar Name="#5 (1000Hz - 1250Hz)" Type="1" MinThreshold="76" MaxThreshold="127" Divisor="1" Index="4">
+     <DMXChannels>0,0</DMXChannels>
+    </SpectrumBar>
+    <SpectrumBar Name="#7 (1500Hz - 1750Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="6">
+     <DMXChannels>0,1</DMXChannels>
+    </SpectrumBar>
+    <SpectrumBar Name="#9 (2000Hz - 2250Hz)" Type="1" MinThreshold="51" MaxThreshold="204" Divisor="1" Index="8">
+     <DMXChannels>0,2</DMXChannels>
+    </SpectrumBar>
+    <SpectrumBar Name="#12 (2750Hz - 3000Hz)" Type="3" MinThreshold="48" MaxThreshold="204" Divisor="1" Index="11" WidgetID="10"/>
+   </AudioTriggers>
+   <Frame Caption="16 couleurs - GhaumCube64_2" ID="0">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="50" Y="310" Width="320" Height="300"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <CueList Caption="16 couleurs chaser" ID="1">
+     <WindowState Visible="True" X="5" Y="35" Width="310" Height="260"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Chaser>38</Chaser>
+     <NextPrevBehavior>0</NextPrevBehavior>
+     <Next/>
+     <Previous/>
+     <Playback/>
+     <Stop/>
+    </CueList>
+   </Frame>
+   <Frame Caption="Debug GhaumCube64_2" ID="2">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="970" Y="0" Width="490" Height="300"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>True</Disabled>
+    <Enable>
+     <Input Universe="0" Channel="217" UpperValue="6"/>
+    </Enable>
+    <Slider Caption="Couleur1" ID="3" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="10" Y="40" Width="80" Height="250"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="RGB" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="128">
+      <Channel Fixture="0">0</Channel>
+      <Channel Fixture="0">1</Channel>
+      <Channel Fixture="0">2</Channel>
+     </Level>
+     <Playback>
+      <Function>4294967295</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="Couleur2" ID="4" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="90" Y="40" Width="90" Height="250"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="RGB" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
+      <Channel Fixture="0">3</Channel>
+      <Channel Fixture="0">4</Channel>
+      <Channel Fixture="0">5</Channel>
+     </Level>
+     <Playback>
+      <Function>4294967295</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="Effect" ID="7" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="175" Y="40" Width="70" Height="250"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="8">
+      <Channel Fixture="0">6</Channel>
+     </Level>
+     <Playback>
+      <Function>4294967295</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="periode" ID="8" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="245" Y="40" Width="70" Height="250"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="Preset" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
+      <Channel Fixture="0">7</Channel>
+     </Level>
+     <Playback>
+      <Function>4294967295</Function>
+     </Playback>
+    </Slider>
+   </Frame>
+   <Frame Caption="chaser Effets" ID="9">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="375" Y="310" Width="370" Height="300"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <CueList Caption="Annimation" ID="10">
+     <WindowState Visible="True" X="10" Y="40" Width="350" Height="245"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Chaser>39</Chaser>
+     <NextPrevBehavior>0</NextPrevBehavior>
+     <Next>
+      <Input Universe="0" Channel="195"/>
+     </Next>
+     <Previous>
+      <Input Universe="0" Channel="194"/>
+     </Previous>
+     <Playback/>
+     <Stop>
+      <Input Universe="0" Channel="129" LowerValue="2" UpperValue="6"/>
+     </Stop>
+    </CueList>
+   </Frame>
+   <SoloFrame Caption="Effets" ID="11">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="750" Y="315" Width="285" Height="270"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Mixing>False</Mixing>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <Frame Caption="" ID="12">
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <WindowState Visible="True" X="5" Y="40" Width="270" Height="220"/>
+     <AllowChildren>False</AllowChildren>
+     <AllowResize>False</AllowResize>
+     <ShowHeader>False</ShowHeader>
+     <ShowEnableButton>True</ShowEnableButton>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="Fill" ID="13" Icon="">
+      <WindowState Visible="True" X="10" Y="10" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="1"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="184" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Wipe" ID="14" Icon="">
+      <WindowState Visible="True" X="60" Y="10" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="2"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="185" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Chaser" ID="15" Icon="">
+      <WindowState Visible="True" X="110" Y="10" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="11"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="186" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Flicker" ID="16" Icon="">
+      <WindowState Visible="True" X="160" Y="10" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="7"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="187" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Ch_F_X" ID="17" Icon="">
+      <WindowState Visible="True" X="210" Y="10" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="5"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="188" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Ch_F_Y" ID="18" Icon="">
+      <WindowState Visible="True" X="10" Y="60" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="176" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Ch_F_Z" ID="19" Icon="">
+      <WindowState Visible="True" X="60" Y="60" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="14"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="177" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="C_F_XYZ" ID="20" Icon="">
+      <WindowState Visible="True" X="110" Y="60" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="13"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="178" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Chaser_V" ID="21" Icon="">
+      <WindowState Visible="True" X="160" Y="60" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="12"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="179" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="InOut" ID="22" Icon="">
+      <WindowState Visible="True" X="210" Y="60" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="9"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="180" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="OutIn" ID="23" Icon="">
+      <WindowState Visible="True" X="10" Y="110" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="19"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="168" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="C_Edges" ID="24" Icon="">
+      <WindowState Visible="True" X="60" Y="110" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="8"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="169" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="WipeF_X" ID="25" Icon="">
+      <WindowState Visible="True" X="110" Y="110" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="6"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="170" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="WipeF_Y" ID="26" Icon="">
+      <WindowState Visible="True" X="160" Y="110" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="17"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="171" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="WipeF_Z" ID="28" Icon="">
+      <WindowState Visible="True" X="210" Y="110" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="16"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="172" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="W_F_XYZ" ID="29" Icon="">
+      <WindowState Visible="True" X="10" Y="160" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="15"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="160" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="Wipe_F_V" ID="30" Icon="">
+      <WindowState Visible="True" X="60" Y="160" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="10"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="161" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="W_InOut" ID="31" Icon="">
+      <WindowState Visible="True" X="110" Y="160" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="18"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="162" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="W_OutIn" ID="32" Icon="">
+      <WindowState Visible="True" X="160" Y="160" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="20"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="163" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+     <Button Caption="WipeEdges" ID="33" Icon="">
+      <WindowState Visible="True" X="210" Y="160" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="21"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+      <Input Universe="0" Channel="164" LowerValue="2" UpperValue="6" MonitorValue="12"/>
+     </Button>
+    </Frame>
+   </SoloFrame>
+   <Slider Caption="Periode" ID="5" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="True" X="1045" Y="315" Width="125" Height="270"/>
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+    <Level LowLimit="0" HighLimit="255" Value="0">
+     <Channel Fixture="0">7</Channel>
+    </Level>
+    <Playback>
+     <Function>4294967295</Function>
+    </Playback>
+   </Slider>
+   <Button Caption="Wintergatan - Sandviken Stradivarius" ID="6" Icon="">
+    <WindowState Visible="True" X="1180" Y="315" Width="340" Height="50"/>
+    <Appearance>
+     <FrameStyle>None</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <Function ID="3"/>
+    <Action>Toggle</Action>
+    <Intensity Adjust="False">100</Intensity>
+    <Input Universe="0" Channel="192" UpperValue="6"/>
+   </Button>
+   <Button Caption="Stop" ID="34" Icon="">
+    <WindowState Visible="True" X="1490" Y="15" Width="160" Height="135"/>
+    <Appearance>
+     <FrameStyle>None</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>4292877092</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>DejaVu Sans,24,-1,5,75,0,0,0,0,0</Font>
+    </Appearance>
+    <Function ID="4294967295"/>
+    <Action>StopAll</Action>
+    <Intensity Adjust="False">100</Intensity>
+   </Button>
+   <Button Caption="01 Hells Bells.mp3" ID="35" Icon="">
+    <WindowState Visible="True" X="1180" Y="365" Width="340" Height="40"/>
+    <Appearance>
+     <FrameStyle>None</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <Function ID="41"/>
+    <Action>Toggle</Action>
+    <Intensity Adjust="False">100</Intensity>
+   </Button>
+  </Frame>
+  <Properties>
+   <Size Width="1920" Height="1080"/>
+   <GrandMaster Visible="1" ChannelMode="Intensity" ValueMode="Reduce" SliderMode="Normal">
+    <Input Universe="0" Channel="56"/>
+   </GrandMaster>
+  </Properties>
+ </VirtualConsole>
+ <SimpleDesk>
+  <Engine/>
+ </SimpleDesk>
+</Workspace>

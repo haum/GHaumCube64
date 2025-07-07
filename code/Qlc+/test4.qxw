@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.12.3</Version>
+  <Author>jerome</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="E1.31" Line="2">
+     <PluginParameters UniverseChannels="36" mcastIP="1" multicast="1" priority="100" transmitMode="Full" ucastIP="192.168.0.166" ucastPort="5568" universe="1"/>
+    </Output>
+    <Feedback Plugin="MIDI" Line="1"/>
+   </Universe>
+   <Universe Name="Universe 2" ID="1">
+    <Output Plugin="ArtNet" Line="2"/>
+   </Universe>
+   <Universe Name="Universe 3" ID="2">
+    <Output Plugin="ArtNet" Line="2">
+     <PluginParameters outputUni="0"/>
+    </Output>
+   </Universe>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>0</ID>
+   <Name>Generic RGB #01</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>1</ID>
+   <Name>Generic RGB #02</Name>
+   <Universe>0</Universe>
+   <Address>3</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>2</ID>
+   <Name>Generic RGB #03</Name>
+   <Universe>0</Universe>
+   <Address>6</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>3</ID>
+   <Name>Generic RGB #04</Name>
+   <Universe>0</Universe>
+   <Address>9</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>4</ID>
+   <Name>Generic RGB #05</Name>
+   <Universe>0</Universe>
+   <Address>12</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>5</ID>
+   <Name>Generic RGB #06</Name>
+   <Universe>0</Universe>
+   <Address>15</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>6</ID>
+   <Name>Generic RGB #07</Name>
+   <Universe>0</Universe>
+   <Address>18</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>7</ID>
+   <Name>Generic RGB #08</Name>
+   <Universe>0</Universe>
+   <Address>21</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>8</ID>
+   <Name>Generic RGB #09</Name>
+   <Universe>0</Universe>
+   <Address>24</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>9</ID>
+   <Name>Generic RGB #10</Name>
+   <Universe>0</Universe>
+   <Address>27</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>10</ID>
+   <Name>Generic RGB #11</Name>
+   <Universe>0</Universe>
+   <Address>30</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Generic</Manufacturer>
+   <Model>Generic RGB</Model>
+   <Mode>RGB</Mode>
+   <ID>11</ID>
+   <Name>Generic RGB #12</Name>
+   <Universe>0</Universe>
+   <Address>33</Address>
+   <Channels>3</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>Tal1</Name>
+   <Size X="1" Y="1"/>
+   <Head X="0" Y="0" Fixture="0">0</Head>
+   <Head X="0" Y="1" Fixture="1">0</Head>
+   <Head X="0" Y="2" Fixture="2">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="1">
+   <Name>Tal2</Name>
+   <Size X="2" Y="2"/>
+   <Head X="0" Y="0" Fixture="3">0</Head>
+   <Head X="1" Y="0" Fixture="4">0</Head>
+   <Head X="0" Y="1" Fixture="5">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="2">
+   <Name>Tal3</Name>
+   <Size X="2" Y="2"/>
+   <Head X="0" Y="0" Fixture="6">0</Head>
+   <Head X="1" Y="0" Fixture="7">0</Head>
+   <Head X="0" Y="1" Fixture="8">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="3">
+   <Name>Tal4</Name>
+   <Size X="2" Y="2"/>
+   <Head X="0" Y="0" Fixture="9">0</Head>
+   <Head X="1" Y="0" Fixture="10">0</Head>
+   <Head X="0" Y="1" Fixture="11">0</Head>
+  </FixtureGroup>
+  <FixtureGroup ID="4">
+   <Name>Generic RGB - Groupe RVB</Name>
+   <Size X="3" Y="1"/>
+   <Head X="0" Y="0" Fixture="3">0</Head>
+   <Head X="1" Y="0" Fixture="4">0</Head>
+   <Head X="2" Y="0" Fixture="5">0</Head>
+  </FixtureGroup>
+  <Function ID="1" Type="Scene" Name="Scène rouge - Tal1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,255</FixtureVal>
+   <FixtureVal ID="1">0,255</FixtureVal>
+   <FixtureVal ID="2">0,255</FixtureVal>
+  </Function>
+  <Function ID="4" Type="Scene" Name="Scène verte - Tal1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">1,255</FixtureVal>
+   <FixtureVal ID="1">1,255</FixtureVal>
+   <FixtureVal ID="2">1,255</FixtureVal>
+  </Function>
+  <Function ID="7" Type="Scene" Name="Scène bleue - Tal1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">2,255</FixtureVal>
+   <FixtureVal ID="1">2,255</FixtureVal>
+   <FixtureVal ID="2">2,255</FixtureVal>
+  </Function>
+  <Function ID="10" Type="Chaser" Name="Tal1">
+   <Speed FadeIn="159" FadeOut="176" Duration="1091"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">1</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">4</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">7</Step>
+  </Function>
+  <Function ID="45" Type="Scene" Name="Scène rouge - Tal2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="3">0,255</FixtureVal>
+   <FixtureVal ID="4">0,255</FixtureVal>
+   <FixtureVal ID="5">0,255</FixtureVal>
+  </Function>
+  <Function ID="46" Type="Scene" Name="Scène verte - Tal2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="3">1,255</FixtureVal>
+   <FixtureVal ID="4">1,255</FixtureVal>
+   <FixtureVal ID="5">1,255</FixtureVal>
+  </Function>
+  <Function ID="47" Type="Scene" Name="Scène bleue - Tal2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="3">2,255</FixtureVal>
+   <FixtureVal ID="4">2,255</FixtureVal>
+   <FixtureVal ID="5">2,255</FixtureVal>
+  </Function>
+  <Function ID="48" Type="Chaser" Name="Tal2">
+   <Speed FadeIn="391" FadeOut="272" Duration="1191"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">45</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">46</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">47</Step>
+  </Function>
+  <Function ID="49" Type="Scene" Name="Scène rouge - Tal3">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="6">0,255</FixtureVal>
+   <FixtureVal ID="7">0,255</FixtureVal>
+   <FixtureVal ID="8">0,255</FixtureVal>
+  </Function>
+  <Function ID="50" Type="Scene" Name="Scène verte - Tal3">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="6">1,255</FixtureVal>
+   <FixtureVal ID="7">1,255</FixtureVal>
+   <FixtureVal ID="8">1,255</FixtureVal>
+  </Function>
+  <Function ID="51" Type="Scene" Name="Scène bleue - Tal3">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="6">2,255</FixtureVal>
+   <FixtureVal ID="7">2,255</FixtureVal>
+   <FixtureVal ID="8">2,255</FixtureVal>
+  </Function>
+  <Function ID="52" Type="Chaser" Name="Tal3">
+   <Speed FadeIn="223" FadeOut="167" Duration="638"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">49</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">50</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">51</Step>
+  </Function>
+  <Function ID="53" Type="Scene" Name="Scène rouge - Tal4">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="9">0,255</FixtureVal>
+   <FixtureVal ID="10">0,255</FixtureVal>
+   <FixtureVal ID="11">0,255</FixtureVal>
+  </Function>
+  <Function ID="54" Type="Scene" Name="Scène verte - Tal4">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="9">1,255</FixtureVal>
+   <FixtureVal ID="10">1,255</FixtureVal>
+   <FixtureVal ID="11">1,255</FixtureVal>
+  </Function>
+  <Function ID="55" Type="Scene" Name="Scène bleue - Tal4">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="9">2,255</FixtureVal>
+   <FixtureVal ID="10">2,255</FixtureVal>
+   <FixtureVal ID="11">2,255</FixtureVal>
+  </Function>
+  <Function ID="56" Type="Chaser" Name="Tal4">
+   <Speed FadeIn="528" FadeOut="615" Duration="2528"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">53</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">54</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">55</Step>
+  </Function>
+  <Function ID="57" Type="Chaser" Name="Rouge">
+   <Speed FadeIn="151" FadeOut="552" Duration="1222"/>
+   <Direction>Forward</Direction>
+   <RunOrder>PingPong</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">1</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">45</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">49</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">53</Step>
+  </Function>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="">
+   <Appearance>
+    <FrameStyle>None</FrameStyle>
+    <ForegroundColor>Default</ForegroundColor>
+    <BackgroundColor>Default</BackgroundColor>
+    <BackgroundImage>None</BackgroundImage>
+    <Font>Default</Font>
+   </Appearance>
+   <Frame Caption="Tal1" ID="0">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="20" Y="305" Width="515" Height="260"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <SoloFrame Caption="Cadre de préréglages solos" ID="1">
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <WindowState Visible="True" X="10" Y="40" Width="190" Height="100"/>
+     <AllowChildren>True</AllowChildren>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>True</ShowHeader>
+     <ShowEnableButton>True</ShowEnableButton>
+     <Mixing>False</Mixing>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="Scène rouge" ID="2" Icon="">
+      <WindowState Visible="True" X="10" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294901760</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="1"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Scène verte" ID="5" Icon="">
+      <WindowState Visible="True" X="65" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278255360</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="4"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Scène bleue" ID="8" Icon="">
+      <WindowState Visible="True" X="120" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278190335</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="7"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+    </SoloFrame>
+    <CueList Caption="Couleurs primaires chaser" ID="11">
+     <WindowState Visible="True" X="205" Y="35" Width="300" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Chaser>10</Chaser>
+     <NextPrevBehavior>0</NextPrevBehavior>
+     <Next/>
+     <Previous/>
+     <Playback/>
+     <Stop/>
+    </CueList>
+   </Frame>
+   <Frame Caption="Tal2" ID="45">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="410" Y="10" Width="520" Height="270"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <SoloFrame Caption="Cadre de préréglages solos" ID="46">
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <WindowState Visible="True" X="5" Y="45" Width="190" Height="100"/>
+     <AllowChildren>True</AllowChildren>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>True</ShowHeader>
+     <ShowEnableButton>True</ShowEnableButton>
+     <Mixing>False</Mixing>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="Scène rouge" ID="47" Icon="">
+      <WindowState Visible="True" X="10" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294901760</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="45"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Scène verte" ID="48" Icon="">
+      <WindowState Visible="True" X="70" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278255360</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="46"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Scène bleue" ID="49" Icon="">
+      <WindowState Visible="True" X="130" Y="40" Width="50" Height="50"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278190335</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Function ID="47"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+    </SoloFrame>
+    <CueList Caption="Couleurs primaires chaser" ID="50">
+     <WindowState Visible="True" X="210" Y="40" Width="300" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Chaser>48</Chaser>
+     <NextPrevBehavior>0</NextPrevBehavior>
+     <Next/>
+     <Previous/>
+     <Playback/>
+     <Stop/>
+    </CueList>
+   </Frame>
+   <Frame Caption="Couleurs primaires - Generic RGB" ID="51">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="45" Y="5" Width="320" Height="270"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <CueList Caption="Couleurs primaires chaser" ID="52">
+     <WindowState Visible="True" X="10" Y="40" Width="300" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Chaser>52</Chaser>
+     <NextPrevBehavior>0</NextPrevBehavior>
+     <Next/>
+     <Previous/>
+     <Playback/>
+     <Stop/>
+    </CueList>
+   </Frame>
+   <Frame Caption="Tal4" ID="53">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <WindowState Visible="True" X="980" Y="40" Width="320" Height="270"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <CueList Caption="Couleurs primaires chaser" ID="54">
+     <WindowState Visible="True" X="10" Y="40" Width="300" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Chaser>56</Chaser>
+     <NextPrevBehavior>0</NextPrevBehavior>
+     <Next/>
+     <Previous/>
+     <Playback/>
+     <Stop/>
+    </CueList>
+   </Frame>
+   <CueList Caption="Rouge" ID="55">
+    <WindowState Visible="True" X="705" Y="400" Width="300" Height="220"/>
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <Chaser>57</Chaser>
+    <NextPrevBehavior>0</NextPrevBehavior>
+    <Next/>
+    <Previous/>
+    <Playback/>
+    <Stop/>
+   </CueList>
+  </Frame>
+  <Properties>
+   <Size Width="1920" Height="1080"/>
+   <GrandMaster ChannelMode="Intensity" ValueMode="Reduce" SliderMode="Normal"/>
+  </Properties>
+ </VirtualConsole>
+ <SimpleDesk>
+  <Engine/>
+ </SimpleDesk>
+</Workspace>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.14.1</Version>
+  <Author>jerome</Author>
+ </Creator>
+ <Manufacturer>Haum</Manufacturer>
+ <Model>GhaumCube64_2</Model>
+ <Type>Color Changer</Type>
+ <Channel Name="Red" Preset="IntensityRed"/>
+ <Channel Name="Green" Preset="IntensityGreen"/>
+ <Channel Name="Blue" Preset="IntensityBlue"/>
+ <Channel Name="Red2" Preset="IntensityRed"/>
+ <Channel Name="Green2" Preset="IntensityGreen"/>
+ <Channel Name="Blue2" Preset="IntensityBlue"/>
+ <Channel Name="annimation">
+  <Group Byte="0">Effect</Group>
+  <Capability Min="0" Max="0">Black</Capability>
+  <Capability Min="1" Max="1">Fill</Capability>
+  <Capability Min="2" Max="2">Wippe</Capability>
+  <Capability Min="3" Max="3">Chaser</Capability>
+  <Capability Min="4" Max="4">Flicker</Capability>
+  <Capability Min="5" Max="5">ChaserFaceX</Capability>
+  <Capability Min="6" Max="6">ChaserFaceY</Capability>
+  <Capability Min="7" Max="7">ChaserFaceZ</Capability>
+  <Capability Min="8" Max="8">ChaserFaceXYZ</Capability>
+  <Capability Min="9" Max="9">ChaserVertical</Capability>
+  <Capability Min="10" Max="10">ChaserInOut</Capability>
+  <Capability Min="11" Max="11">ChaserOutIn</Capability>
+  <Capability Min="12" Max="12">ChaserEdges</Capability>
+  <Capability Min="13" Max="13">WipeFaceX</Capability>
+  <Capability Min="14" Max="14">WipeFaceY</Capability>
+  <Capability Min="15" Max="15">WipeFaceZ</Capability>
+  <Capability Min="16" Max="16">WipeFaceXYZ</Capability>
+  <Capability Min="17" Max="17">WipeInOut</Capability>
+  <Capability Min="18" Max="18">WipeOutIn</Capability>
+  <Capability Min="19" Max="19">WipeEdges</Capability>
+ </Channel>
+ <Channel Name="periode">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="255" Preset="FastToSlow">x100ms</Capability>
+ </Channel>
+ <Mode Name="normal">
+  <Channel Number="0">Red</Channel>
+  <Channel Number="1">Green</Channel>
+  <Channel Number="2">Blue</Channel>
+  <Channel Number="3">Red2</Channel>
+  <Channel Number="4">Green2</Channel>
+  <Channel Number="5">Blue2</Channel>
+  <Channel Number="6">annimation</Channel>
+  <Channel Number="7">periode</Channel>
+ </Mode>
+ <Physical>
+  <Bulb Type="" Lumens="0" ColourTemperature="0"/>
+  <Dimensions Weight="0" Width="0" Height="0" Depth="0"/>
+  <Lens Name="Other" DegreesMin="0" DegreesMax="0"/>
+  <Focus Type="Fixed" PanMax="0" TiltMax="0"/>
+  <Technical PowerConsumption="0" DmxConnector="5-pin"/>
+ </Physical>
+</FixtureDefinition>
