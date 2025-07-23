@@ -299,3 +299,11 @@ class Effect_20_WipeEdges(Effect):
         for i in range(64):
             self.ca[i].set_colors(2, 2)
         helper_edges(o)
+
+
+class Effect_21_BlinkHalf(Effect):
+    def onStart(self):
+        for i in range(64):
+            self.ca[i].set_colors()
+            self.ca[i].set_duty_cycle(1/2)
+            self.ca[i].set_phase_percent(0)
