@@ -3,12 +3,13 @@
 import itertools
 import pyglet
 import sacn
+from math import radians
 
 window = pyglet.window.Window(width=800, height=800)
 batch = pyglet.graphics.Batch()
 pyglet.gl.glClearColor(0.15,0.2,0.2,1)
-pyglet.gl.glTranslatef(400, 0, 0)
-pyglet.gl.glRotatef(45, 0, 0, 1)
+window.view = window.view.translate((400, 0, 0))
+window.view = window.view.rotate(radians(45), (0, 0, 1))
 
 def make_polygons(x, y, w_small, w_large, h):
     polys = []
