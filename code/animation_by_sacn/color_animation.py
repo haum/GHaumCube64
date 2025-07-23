@@ -37,15 +37,65 @@ class ColorAnimation:
     def set_phase_percent(self, p):
         self.progress_percent = min(max(0, p), 1)
 
+    def fading_helper_4phases(self, f1, f2):
+        if self.progress_percent < f1:
+            m = self.progress_percent / f1
+        elif self.progress_percent < self.duty_cycle:
+            m = 1
+        elif self.progress_percent < self.duty_cycle + f2:
+            m = 1 - (self.progress_percent - self.duty_cycle) / f2
+        else:
+            m = 0
+        return m
+
+    def fading_asym(self, f, f_in=True, f_out=True):
+        return self.fading_helper_4phases(
+            f * self.duty_cycle * f_in,
+            f * (1 - self.duty_cycle) * f_out,
+        )
+
+    def fading_sym(self, f, f_in=True, f_out=True):
+        f = min(self.duty_cycle, 1 - self.duty_cycle) * f
+        return self.fading_helper_4phases(f * f_in, f * f_out)
+
+    def fading_ignore_dutycycle(self, f, f_in=True, f_out=True):
+        if f_in and f_out:
+            f /= 2
+        if self.progress_percent < f * f_in:
+            m = self.progress_percent / f
+        elif self.progress_percent > 1 - f * f_out:
+            m = (1 - self.progress_percent) / f
+        else:
+            m = 1
+        return m
+
+    def fading(self, f):
+        mode = int((f + 9) / 10)-1
+        p = (((f - 1) % 10) + 1) / 10
+        match mode:
+            case -1: return self.fading_sym(0)
+            case 0: return self.fading_sym(p, f_out=False)
+            case 1: return self.fading_sym(p, f_in=False)
+            case 2: return self.fading_sym(p)
+            case 3: return self.fading_asym(p, f_out=False)
+            case 4: return self.fading_asym(p, f_in=False)
+            case 5: return self.fading_asym(p)
+            case 6: return self.fading_ignore_dutycycle(p, f_out=False)
+            case 7: return self.fading_ignore_dutycycle(p, f_in=False)
+            case 8: return self.fading_ignore_dutycycle(p)
+        return 0
+
     def animate(self, dt):
         self.progress_percent += dt / self.cube.period
         if self.progress_percent > 1:
             self.progress_percent %= 1
-        if self.progress_percent > self.duty_cycle:
-            c = self._color(self.color2, 2)
-        else:
-            c = self._color(self.color1, 1)
-        return c
+
+        m = self.fading(self.cube.fading)
+        return tuple(map(
+            lambda a, b: round(m * a + (1 - m) * b),
+            self._color(self.color1, 1),
+            self._color(self.color2, 2)
+        ))
 
 
 class CubeAnimator:
@@ -55,6 +105,7 @@ class CubeAnimator:
         self.color1 = (0, 0, 0)
         self.color2 = (0, 0, 0)
         self.period = 2
+        self.fading = 0
 
         self.anims = [ColorAnimation(self) for _ in range(64)]
 
@@ -103,6 +154,9 @@ class CubeAnimator:
             self.period = p
             if self.fx:
                 self.fx.onPeriodChanged()
+
+    def setFading(self, f):
+        self.fading = int(f)
 
     def animate(self, dt):
         if self.fx:
