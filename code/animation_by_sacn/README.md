@@ -24,12 +24,19 @@ Data on universe 3:
 |    5 |         B2 | Color2, blue component  |
 |    6 |         FX | Effect number           |
 |    7 |         P  | Period                  |
+|    8 |         F  | Fading                  |
 
 If effect number is not supported, the cube is black.
 0 is black, first effect is 1
 
 Period is in arbitrary units for using the full range of the slider.
 Lower is faster, 0 is a special value for "normal speed".
+
+Fading is for configuring color fading mode.
+F = [fading_mode] * 10 + [percentage 0-100] / 10
+
+Fading modes @ ⅓ and ⅔ duty cycle:
+![Fading modes](./fading_modes.svg)
 
 Programs
 --------

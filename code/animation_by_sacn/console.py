@@ -38,13 +38,14 @@ class Console:
     def input_menu(self, line: str):
         if line is None:
             d = self.data[0]
-            print(f'c1: {d[0:3]} c2: {d[3:6]} fx: {d[6]} p:{pdec(d[7])}')
+            print(f'c1: {d[0:3]} c2: {d[3:6]} fx: {d[6]} p:{pdec(d[7])} f:{d[8]}')
             print('1. Color 1')
             print('2. Color 2')
             print('3. Fx')
             print('4. Fx--')
             print('5. Fx++')
             print('6. Period')
+            print('7. Fading')
             return
         n = parseInt(line)
         if n == 1:
@@ -61,6 +62,8 @@ class Console:
             self.input_menu(None)
         elif n == 6:
             self.change_input(self.input_period)
+        elif n == 7:
+            self.change_input(self.input_fading)
         else:
             print('Incorrect input')
             self.input_menu(None)
@@ -93,6 +96,13 @@ class Console:
         self.data[0][7] = min(max(0, int(parseFloat(line)*10)), 255)
         self.change_input(self.input_menu)
 
+    def input_fading(self, line: str):
+        if line is None:
+            print('Fading?')
+            return
+        self.data[0][8] = min(max(0, parseInt(line)), 255)
+        self.change_input(self.input_menu)
+
     def process(self, timeout=0):
         if sys.stdin.isatty():
             r, _, _ = select.select([sys.stdin], [], [], timeout)
@@ -109,7 +119,7 @@ if __name__ == '__main__':
     sender[3].multicast = True
     sender.manual_flush = True
 
-    data = [[255, 0, 0, 0, 0, 0, 2, 0]]
+    data = [[255, 0, 0, 0, 0, 0, 2, 0, 0]]
     console = Console(data)
 
     try:

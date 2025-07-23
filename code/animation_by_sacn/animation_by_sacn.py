@@ -18,13 +18,13 @@ def main():
         cubectrl = CubeSacnController('SacnAnim', bind_port=5569)
         ca = CubeAnimator(cubectrl)
 
-        data = [[0, 0, 0, 0, 0, 0, 0, 0]]
+        data = [[0, 0, 0, 0, 0, 0, 0, 0, 0]]
         console = Console(data)
 
         @receiver.listen_on('universe', universe=3)
         def callback(packet):
             if packet.dmxStartCode == 0x00:  # ignore non-DMX-data packets
-                data[0] = list(packet.dmxData[:8])
+                data[0] = list(packet.dmxData[:9])
 
         t_now = t_target = timer()
         while True:
@@ -34,6 +34,7 @@ def main():
             ca.setColors(data[0][0:3], data[0][3:6])
             ca.setFx(data[0][6])
             ca.setPeriod(data[0][7])
+            ca.setFading(data[0][8])
 
             console.process()
             ca.animate(dt)
