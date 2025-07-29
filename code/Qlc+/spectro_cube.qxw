@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FunctionManager">
  <Creator>
   <Name>Q Light Controller Plus</Name>
-  <Version>4.14.3</Version>
+  <Version>4.14.1</Version>
   <Author>jerome</Author>
  </Creator>
  <Engine>
@@ -16,7 +16,7 @@
    <Universe Name="Universe 2" ID="1"/>
    <Universe Name="animateur" ID="2">
     <Output Plugin="E1.31" UID="127.0.0.1" Line="0">
-     <PluginParameters UniverseChannels="8" mcastFullIP="239.255.0.3" multicast="1" priority="100" transmitMode="Full" universe="3"/>
+     <PluginParameters UniverseChannels="9" mcastFullIP="239.255.0.3" multicast="1" priority="100" transmitMode="Full" universe="3"/>
     </Output>
    </Universe>
    <Universe Name="Universe 4" ID="3"/>
@@ -24,7 +24,7 @@
     <Input Plugin="E1.31" UID="127.0.0.1" Line="0">
      <PluginParameters mcastFullIP="239.255.0.3" multicast="1" universe="3"/>
     </Input>
-    <Output Plugin="E1.31" UID="192.168.0.140" Line="1">
+    <Output Plugin="E1.31" UID="192.168.57.107" Line="1">
      <PluginParameters mcastFullIP="239.255.0.3" multicast="1" priority="100" transmitMode="Full" universe="3"/>
     </Output>
    </Universe>
@@ -37,7 +37,7 @@
    <Name>GhaumCube64_2</Name>
    <Universe>2</Universe>
    <Address>0</Address>
-   <Channels>8</Channels>
+   <Channels>9</Channels>
   </Fixture>
   <Function ID="0" Type="Scene" Name="00_BlackOut">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -50,11 +50,6 @@
   <Function ID="2" Type="Scene" Name="02_Wipe">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="0">6,2</FixtureVal>
-  </Function>
-  <Function ID="3" Type="Audio" Name="Wintergatan - Sandviken Stradivarius.flac">
-   <Speed FadeIn="0" FadeOut="0" Duration="350226"/>
-   <RunOrder>SingleShot</RunOrder>
-   <Source Device="pulse">/home/jerome/Musique/Wintergatan - Sandviken Stradivarius.flac</Source>
   </Function>
   <Function ID="4" Type="Scene" Name="06_ChaserFaceY">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -130,67 +125,67 @@
   </Function>
   <Function ID="22" Type="Scene" Name="GhaumCube64_2 - Noir - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,3,0,4,0,5,0</FixtureVal>
+   <FixtureVal ID="0">3,10,4,10,5,10</FixtureVal>
   </Function>
   <Function ID="23" Type="Scene" Name="GhaumCube64_2 - Bleu foncé - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,3,0,4,0,5,128</FixtureVal>
+   <FixtureVal ID="0">3,0,4,0,5,128</FixtureVal>
   </Function>
   <Function ID="24" Type="Scene" Name="GhaumCube64_2 - Bleu - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,3,0,4,0,5,255</FixtureVal>
+   <FixtureVal ID="0">3,0,4,0,5,255</FixtureVal>
   </Function>
   <Function ID="25" Type="Scene" Name="GhaumCube64_2 - Vert foncé - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,3,0,4,128,5,0</FixtureVal>
+   <FixtureVal ID="0">3,0,4,128,5,0</FixtureVal>
   </Function>
   <Function ID="26" Type="Scene" Name="GhaumCube64_2 - Cyan foncé - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,3,0,4,128,5,128</FixtureVal>
+   <FixtureVal ID="0">3,0,4,128,5,128</FixtureVal>
   </Function>
   <Function ID="27" Type="Scene" Name="GhaumCube64_2 - Vert - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,3,0,4,255,5,0</FixtureVal>
+   <FixtureVal ID="0">3,0,4,255,5,0</FixtureVal>
   </Function>
   <Function ID="28" Type="Scene" Name="GhaumCube64_2 - Cyan - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,0,3,0,4,255,5,255</FixtureVal>
+   <FixtureVal ID="0">3,0,4,255,5,255</FixtureVal>
   </Function>
   <Function ID="29" Type="Scene" Name="GhaumCube64_2 - Rouge foncé - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,128,3,128,4,0,5,0</FixtureVal>
+   <FixtureVal ID="0">3,128,4,0,5,0</FixtureVal>
   </Function>
   <Function ID="30" Type="Scene" Name="GhaumCube64_2 - Magenta foncé - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,128,3,128,4,0,5,128</FixtureVal>
+   <FixtureVal ID="0">3,128,4,0,5,128</FixtureVal>
   </Function>
   <Function ID="31" Type="Scene" Name="GhaumCube64_2 - Jaune foncé - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,128,3,128,4,128,5,0</FixtureVal>
+   <FixtureVal ID="0">3,128,4,128,5,0</FixtureVal>
   </Function>
   <Function ID="32" Type="Scene" Name="GhaumCube64_2 - Gris foncé - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,128,3,128,4,128,5,128</FixtureVal>
+   <FixtureVal ID="0">3,128,4,128,5,128</FixtureVal>
   </Function>
   <Function ID="33" Type="Scene" Name="GhaumCube64_2 - Gris clair - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,192,3,192,4,192,5,192</FixtureVal>
+   <FixtureVal ID="0">3,192,4,192,5,192</FixtureVal>
   </Function>
   <Function ID="34" Type="Scene" Name="GhaumCube64_2 - Rouge - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,255,3,255,4,0,5,0</FixtureVal>
+   <FixtureVal ID="0">3,255,4,0,5,0</FixtureVal>
   </Function>
   <Function ID="35" Type="Scene" Name="GhaumCube64_2 - Magenta - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,255,3,255,4,0,5,255</FixtureVal>
+   <FixtureVal ID="0">3,255,4,0,5,255</FixtureVal>
   </Function>
   <Function ID="36" Type="Scene" Name="GhaumCube64_2 - Jaune - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,255,3,255,4,255,5,0</FixtureVal>
+   <FixtureVal ID="0">3,255,4,255,5,0</FixtureVal>
   </Function>
   <Function ID="37" Type="Scene" Name="GhaumCube64_2 - Blanc - Scène">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">0,255,3,255,4,255,5,255</FixtureVal>
+   <FixtureVal ID="0">3,255,4,255,5,255</FixtureVal>
   </Function>
   <Function ID="38" Type="Chaser" Name="16 couleurs chaser - GhaumCube64_2">
    <Speed FadeIn="500" FadeOut="500" Duration="4294967294"/>
@@ -240,17 +235,6 @@
    <Step Number="18" FadeIn="0" Hold="0" FadeOut="0">20</Step>
    <Step Number="19" FadeIn="0" Hold="0" FadeOut="0">21</Step>
   </Function>
-  <Function ID="40" Type="Show" Name="Nouveau show 40">
-   <TimeDivision Type="Time" BPM="120"/>
-   <Track ID="0" Name="Piste 1" isMute="0">
-    <ShowFunction ID="3" StartTime="0" Duration="350226" Color="#608053"/>
-   </Track>
-  </Function>
-  <Function ID="41" Type="Audio" Name="01 Hells Bells.mp3">
-   <Speed FadeIn="0" FadeOut="0" Duration="312507"/>
-   <RunOrder>SingleShot</RunOrder>
-   <Source>/home/jerome/Musique/AC-DC - Back in Black (1980)/01 Hells Bells.mp3</Source>
-  </Function>
   <Monitor DisplayMode="0" ShowLabels="0">
    <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
@@ -268,7 +252,7 @@
     <Font>Default</Font>
    </Appearance>
    <AudioTriggers BarsNumber="20" Caption="Equ" ID="27">
-    <WindowState Visible="True" X="50" Y="5" Width="845" Height="265"/>
+    <WindowState Visible="False" X="50" Y="5" Width="845" Height="265"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -301,7 +285,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="50" Y="310" Width="320" Height="300"/>
+    <WindowState Visible="False" X="50" Y="310" Width="320" Height="300"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -309,7 +293,7 @@
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
     <CueList Caption="16 couleurs chaser" ID="1">
-     <WindowState Visible="True" X="5" Y="35" Width="310" Height="260"/>
+     <WindowState Visible="False" X="5" Y="35" Width="310" Height="260"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -333,7 +317,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="970" Y="0" Width="490" Height="300"/>
+    <WindowState Visible="False" X="970" Y="0" Width="490" Height="300"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -344,7 +328,7 @@
      <Input Universe="0" Channel="217" UpperValue="6"/>
     </Enable>
     <Slider Caption="Couleur1" ID="3" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="10" Y="40" Width="80" Height="250"/>
+     <WindowState Visible="False" X="10" Y="40" Width="80" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -363,7 +347,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Couleur2" ID="4" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="90" Y="40" Width="90" Height="250"/>
+     <WindowState Visible="False" X="90" Y="40" Width="90" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -382,7 +366,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Effect" ID="7" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="175" Y="40" Width="70" Height="250"/>
+     <WindowState Visible="False" X="175" Y="40" Width="70" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -399,7 +383,7 @@
      </Playback>
     </Slider>
     <Slider Caption="periode" ID="8" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="245" Y="40" Width="70" Height="250"/>
+     <WindowState Visible="False" X="245" Y="40" Width="70" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -424,7 +408,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="375" Y="310" Width="370" Height="300"/>
+    <WindowState Visible="False" X="375" Y="310" Width="370" Height="300"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -432,7 +416,7 @@
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
     <CueList Caption="Annimation" ID="10">
-     <WindowState Visible="True" X="10" Y="40" Width="350" Height="245"/>
+     <WindowState Visible="False" X="10" Y="40" Width="350" Height="245"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -462,7 +446,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="750" Y="315" Width="285" Height="270"/>
+    <WindowState Visible="False" X="750" Y="315" Width="285" Height="270"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -478,7 +462,7 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <WindowState Visible="True" X="5" Y="40" Width="270" Height="220"/>
+     <WindowState Visible="False" X="5" Y="40" Width="270" Height="220"/>
      <AllowChildren>False</AllowChildren>
      <AllowResize>False</AllowResize>
      <ShowHeader>False</ShowHeader>
@@ -486,7 +470,7 @@
      <Collapsed>False</Collapsed>
      <Disabled>False</Disabled>
      <Button Caption="Fill" ID="13" Icon="">
-      <WindowState Visible="True" X="10" Y="10" Width="50" Height="50"/>
+      <WindowState Visible="False" X="10" Y="10" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -500,7 +484,7 @@
       <Input Universe="0" Channel="184" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Wipe" ID="14" Icon="">
-      <WindowState Visible="True" X="60" Y="10" Width="50" Height="50"/>
+      <WindowState Visible="False" X="60" Y="10" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -514,7 +498,7 @@
       <Input Universe="0" Channel="185" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Chaser" ID="15" Icon="">
-      <WindowState Visible="True" X="110" Y="10" Width="50" Height="50"/>
+      <WindowState Visible="False" X="110" Y="10" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -528,7 +512,7 @@
       <Input Universe="0" Channel="186" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Flicker" ID="16" Icon="">
-      <WindowState Visible="True" X="160" Y="10" Width="50" Height="50"/>
+      <WindowState Visible="False" X="160" Y="10" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -542,7 +526,7 @@
       <Input Universe="0" Channel="187" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Ch_F_X" ID="17" Icon="">
-      <WindowState Visible="True" X="210" Y="10" Width="50" Height="50"/>
+      <WindowState Visible="False" X="210" Y="10" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -556,7 +540,7 @@
       <Input Universe="0" Channel="188" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Ch_F_Y" ID="18" Icon="">
-      <WindowState Visible="True" X="10" Y="60" Width="50" Height="50"/>
+      <WindowState Visible="False" X="10" Y="60" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -570,7 +554,7 @@
       <Input Universe="0" Channel="176" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Ch_F_Z" ID="19" Icon="">
-      <WindowState Visible="True" X="60" Y="60" Width="50" Height="50"/>
+      <WindowState Visible="False" X="60" Y="60" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -584,7 +568,7 @@
       <Input Universe="0" Channel="177" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="C_F_XYZ" ID="20" Icon="">
-      <WindowState Visible="True" X="110" Y="60" Width="50" Height="50"/>
+      <WindowState Visible="False" X="110" Y="60" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -598,7 +582,7 @@
       <Input Universe="0" Channel="178" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Chaser_V" ID="21" Icon="">
-      <WindowState Visible="True" X="160" Y="60" Width="50" Height="50"/>
+      <WindowState Visible="False" X="160" Y="60" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -612,7 +596,7 @@
       <Input Universe="0" Channel="179" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="InOut" ID="22" Icon="">
-      <WindowState Visible="True" X="210" Y="60" Width="50" Height="50"/>
+      <WindowState Visible="False" X="210" Y="60" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -626,7 +610,7 @@
       <Input Universe="0" Channel="180" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="OutIn" ID="23" Icon="">
-      <WindowState Visible="True" X="10" Y="110" Width="50" Height="50"/>
+      <WindowState Visible="False" X="10" Y="110" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -640,7 +624,7 @@
       <Input Universe="0" Channel="168" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="C_Edges" ID="24" Icon="">
-      <WindowState Visible="True" X="60" Y="110" Width="50" Height="50"/>
+      <WindowState Visible="False" X="60" Y="110" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -654,7 +638,7 @@
       <Input Universe="0" Channel="169" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="WipeF_X" ID="25" Icon="">
-      <WindowState Visible="True" X="110" Y="110" Width="50" Height="50"/>
+      <WindowState Visible="False" X="110" Y="110" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -668,7 +652,7 @@
       <Input Universe="0" Channel="170" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="WipeF_Y" ID="26" Icon="">
-      <WindowState Visible="True" X="160" Y="110" Width="50" Height="50"/>
+      <WindowState Visible="False" X="160" Y="110" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -682,7 +666,7 @@
       <Input Universe="0" Channel="171" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="WipeF_Z" ID="28" Icon="">
-      <WindowState Visible="True" X="210" Y="110" Width="50" Height="50"/>
+      <WindowState Visible="False" X="210" Y="110" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -696,7 +680,7 @@
       <Input Universe="0" Channel="172" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="W_F_XYZ" ID="29" Icon="">
-      <WindowState Visible="True" X="10" Y="160" Width="50" Height="50"/>
+      <WindowState Visible="False" X="10" Y="160" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -710,7 +694,7 @@
       <Input Universe="0" Channel="160" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="Wipe_F_V" ID="30" Icon="">
-      <WindowState Visible="True" X="60" Y="160" Width="50" Height="50"/>
+      <WindowState Visible="False" X="60" Y="160" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -724,7 +708,7 @@
       <Input Universe="0" Channel="161" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="W_InOut" ID="31" Icon="">
-      <WindowState Visible="True" X="110" Y="160" Width="50" Height="50"/>
+      <WindowState Visible="False" X="110" Y="160" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -738,7 +722,7 @@
       <Input Universe="0" Channel="162" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="W_OutIn" ID="32" Icon="">
-      <WindowState Visible="True" X="160" Y="160" Width="50" Height="50"/>
+      <WindowState Visible="False" X="160" Y="160" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -752,7 +736,7 @@
       <Input Universe="0" Channel="163" LowerValue="2" UpperValue="6" MonitorValue="12"/>
      </Button>
      <Button Caption="WipeEdges" ID="33" Icon="">
-      <WindowState Visible="True" X="210" Y="160" Width="50" Height="50"/>
+      <WindowState Visible="False" X="210" Y="160" Width="50" Height="50"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -768,7 +752,7 @@
     </Frame>
    </SoloFrame>
    <Slider Caption="Periode" ID="5" WidgetStyle="Slider" InvertedAppearance="false">
-    <WindowState Visible="True" X="1045" Y="315" Width="125" Height="270"/>
+    <WindowState Visible="False" X="1045" Y="315" Width="125" Height="270"/>
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -784,22 +768,8 @@
      <Function>4294967295</Function>
     </Playback>
    </Slider>
-   <Button Caption="Wintergatan - Sandviken Stradivarius" ID="6" Icon="">
-    <WindowState Visible="True" X="1180" Y="315" Width="340" Height="50"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="3"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-    <Input Universe="0" Channel="192" UpperValue="6"/>
-   </Button>
    <Button Caption="Stop" ID="34" Icon="">
-    <WindowState Visible="True" X="1490" Y="15" Width="160" Height="135"/>
+    <WindowState Visible="False" X="1490" Y="15" Width="160" Height="135"/>
     <Appearance>
      <FrameStyle>None</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
@@ -811,23 +781,27 @@
     <Action>StopAll</Action>
     <Intensity Adjust="False">100</Intensity>
    </Button>
-   <Button Caption="01 Hells Bells.mp3" ID="35" Icon="">
-    <WindowState Visible="True" X="1180" Y="365" Width="340" Height="40"/>
+   <Slider Caption="Fading" ID="6" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="False" X="1170" Y="315" Width="90" Height="270"/>
     <Appearance>
-     <FrameStyle>None</FrameStyle>
+     <FrameStyle>Sunken</FrameStyle>
      <ForegroundColor>Default</ForegroundColor>
      <BackgroundColor>Default</BackgroundColor>
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <Function ID="41"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-   </Button>
+    <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+    <Level LowLimit="0" HighLimit="255" Value="0">
+     <Channel Fixture="0">8</Channel>
+    </Level>
+    <Playback>
+     <Function>4294967295</Function>
+    </Playback>
+   </Slider>
   </Frame>
   <Properties>
    <Size Width="1920" Height="1080"/>
-   <GrandMaster Visible="1" ChannelMode="Intensity" ValueMode="Reduce" SliderMode="Normal">
+   <GrandMaster ChannelMode="Intensity" ValueMode="Reduce" SliderMode="Normal">
     <Input Universe="0" Channel="56"/>
    </GrandMaster>
   </Properties>
