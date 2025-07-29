@@ -42,6 +42,10 @@
   <Group Byte="0">Speed</Group>
   <Capability Min="0" Max="255" Preset="FastToSlow">x100ms</Capability>
  </Channel>
+ <Channel Name="Fading">
+  <Group Byte="0">Nothing</Group>
+  <Capability Min="0" Max="255">No function</Capability>
+ </Channel>
  <Mode Name="normal">
   <Channel Number="0">Red</Channel>
   <Channel Number="1">Green</Channel>
@@ -51,6 +55,7 @@
   <Channel Number="5">Blue2</Channel>
   <Channel Number="6">annimation</Channel>
   <Channel Number="7">periode</Channel>
+  <Channel Number="8">Fading</Channel>
  </Mode>
  <Physical>
   <Bulb Type="" Lumens="0" ColourTemperature="0"/>
