@@ -3,7 +3,7 @@
 <FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
  <Creator>
   <Name>Q Light Controller Plus</Name>
-  <Version>4.14.1</Version>
+  <Version>4.14.3</Version>
   <Author>jerome</Author>
  </Creator>
  <Manufacturer>Haum</Manufacturer>
@@ -37,6 +37,7 @@
   <Capability Min="17" Max="17">WipeInOut</Capability>
   <Capability Min="18" Max="18">WipeOutIn</Capability>
   <Capability Min="19" Max="19">WipeEdges</Capability>
+  <Capability Min="20" Max="20">Blink</Capability>
  </Channel>
  <Channel Name="periode">
   <Group Byte="0">Speed</Group>
